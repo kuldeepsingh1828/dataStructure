@@ -19,3 +19,13 @@ int main()
 	 }
 	 flag ? printf("ITEM FOUND\n") : printf("ITEM NOT FOUND\n");
 }
+
+prime number 
+
+2 days --- EFFORT 
+
+30+ 
+
+
+
+WRITE ON NOTEBOOK
