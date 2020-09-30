@@ -2,6 +2,7 @@
 #include <stdlib.h>
 using namespace  std;
 const int size = 50;
+
 class Stack
 {
   public : 
@@ -49,6 +50,7 @@ class Stack
   	 }
   }
 };
+
 int main()
 {
 	system("clear");

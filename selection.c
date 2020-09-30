@@ -1,4 +1,4 @@
-//BUBBLE SORT (ASC to DESC)
+//SELECTION SORT (ASC to DESC)
 #include <stdio.h>
 int main()
 {
@@ -36,7 +36,13 @@ int main()
 			A[pos] = temp;
 			count++;
 		}
+		printf("\nAFTER ITERATION %d:  \n",i+1);
+		for (int j = 0; j < size; ++j)
+		{
+			printf("%d ",A[j] );	
+		}
 	}
+	printf("\n");
 	for (int i = 0; i < size; ++i)
 	{
 		printf("%d ",A[i] );	

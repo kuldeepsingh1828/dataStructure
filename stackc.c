@@ -15,6 +15,7 @@ void push(int item)
 		Stack[top] = item;
 	}
 }
+
 int pop()
 {
 	if (top == -1)
@@ -29,6 +30,7 @@ int pop()
 		return item;
 	}
 }
+
 void display()
 {
 	if (top!=-1)

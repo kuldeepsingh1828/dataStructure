@@ -1,4 +1,5 @@
 //BUBBLE SORT (ASC to DESC)
+//12 56 42 78 41 89 32 93 45 72
 #include <stdio.h>
 int main()
 {
@@ -29,7 +30,13 @@ int main()
 				count++;
 			}
 		}
+		printf("\nAFTER ITERATION %d:  \n",i+1);
+		for (int j = 0; j < size; ++j)
+		{
+			printf("%d ",A[j] );	
+		}
 	}
+	printf("\n");
 	for (int i = 0; i < size; ++i)
 	{
 		printf("%d ",A[i] );	
