@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main()
+{
+	int A[][3] = 
+	{
+		1,2,3,
+		4,5,6,
+		7,8,9
+	};
+	int *p; //WILD POINTER
+	p = &A[0][0]; //pointing to 2D Array 
+	printf("%d\n", *(p+1));
+}
+
+
+
+
