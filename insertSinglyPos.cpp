@@ -65,24 +65,16 @@ int main()
 		cin>>c;
 	}
 	display();
+	cout<<"\nCount is  : "<<count<<endl;
 	cout<<"\nEnter new node data : ";
 	cin>>data;
 	cout<<"\nEnter Position : ";
 	cin>>pos;
-	if (!(pos<=count))
+	if (pos>0 && pos<=count)
 	{
-		cout<<"\nPosition specified is not possible...\n";
-		return -1;
-	}
-	else
-	{
-		node = new Node;
-		if (node==NULL)
-		{
-			cout<<"\nMemory not allocated..\n";
-		}
+		node  = new Node;
 		node->data = data;
-		node->next = NULL;
+		node->next=NULL;
 		if (pos==1)
 		{
 			node->next = start;
@@ -90,18 +82,26 @@ int main()
 		}
 		else
 		{
-			struct Node *t;
-			cout<<"\nthis is else ";
-			t = start;
-			int i = 1;
-			while(i<pos)
+			struct Node *temp;
+			temp = start;
+			int i  = 1;
+			while(i!=(pos-1))
 			{
-				t = t->next;
+				temp = temp->next;
+				i++;
 			}
-			cout<<"\nWHILE LOOP END\n";
-			node->next = t->next; 
-			t->next = node;
+			node->next = temp->next;
+			temp->next = node;
 		}
+	}
+	else if (pos==(count+1))
+	{
+		cout<<"\nYou can do...\n";
+		//insert into end
+	}
+	else
+	{
+		cout<<"\nNOT POSSIBLE...\n";
 	}
 	cout<<"\nAfter insertion of new Node : \n";
 	display();
