@@ -6,7 +6,7 @@ struct Node
 	struct Node *prev;
 	int data;
 	struct Node *next;
-}*start,*node;
+}*start,*node,*Previous,*Next;
 void display()
 {
 	struct Node *temp;
@@ -53,6 +53,24 @@ int main()
 		}
 		cout<<"\nMore  ? ";
 		cin>>c;
+	}
+	display();
+	Previous = start;
+	struct Node *temp2;
+	while(Previous!=NULL)
+	{
+		Next = Previous->next;
+		while(Next!=NULL)
+		{
+			if (Previous->data > Next->data)
+			{
+				int t = Previous->data;
+				Previous->data = Next->data;
+				Next->data = t;
+			}
+			Next = Next->next;
+		}
+		Previous = Previous->next;
 	}
 	display();
 }

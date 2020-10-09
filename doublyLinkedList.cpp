@@ -5,7 +5,7 @@ struct Node
 	struct Node *prev;
 	int data;
 	struct Node *next;
-}*start,*node1,*node2,*node3,*node4;
+}*start,*node1;
 void display()
 {
 	struct Node *temp;
