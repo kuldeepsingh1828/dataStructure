@@ -19,6 +19,7 @@ void insert(int data)
 	{
 		node->data = data;
 		node->next = NULL;
+		
 		if (start==NULL) // NO DATA
 		{
 			start=node;
