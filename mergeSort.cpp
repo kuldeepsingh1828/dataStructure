@@ -9,7 +9,9 @@ int main()
     printf("\n Enter %d elements in the array : \n",n);
     for(i=0; i<n; i++)
         scanf("%d", &arry[i]);
+
     merge_sort(arry, 0, n-1);
+    
     printf("\n Sorted Array in ascending order is : \n");
     for(i=0; i<n; i++)
         printf("%d ",arry[i]);
@@ -53,6 +55,7 @@ void merge(int arry[], int beg, int mid, int end)
     for(k = beg;k < index; k++)
         arry[k] = temp[k];
 }
+
 void merge_sort(int arry[], int beg, int end)
 {
     int mid;
