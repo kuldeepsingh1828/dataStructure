@@ -10,9 +10,7 @@ int main()
     for(i = 1; i <= n; ++i)
         scanf("%d", &x[i]);
     buildheap();
-    for(i = 1;i <= n; ++i)
-        printf("%d ", x[i]);
-    heapsort();
+   heapsort();
     printf("\nSorted Array in ascending order is : \n");
     for(i = 1;i <= n; ++i)
         printf("%5d", x[i]);
@@ -51,11 +49,6 @@ void heapsort()
         if((j+1) < k)
             if(x[j+1] > x[j])
                 j++;
-         printf("\nBEFORE WHILE: ");
-        for (int l = 1; l <= n ; ++l)
-        {
-            printf("%d ",x[l] );
-        }
         while((j <= (k-1)) && (x[j] > value))
         {
             x[i] = x[j];
@@ -68,16 +61,6 @@ void heapsort()
                     if(j > n)
                         j = n;
             x[i] = value;
-            printf("\nWHILE: ");
-            for (int l = 1; l <= n ; ++l)
-            {
-                printf("%d ",x[l] );
-            }
-        }
-        printf("\nAFTER WHILE: \n");
-        for (int l = 1; l <= n ; ++l)
-        {
-            printf("%d ",x[l] );
         }
     }
 }
