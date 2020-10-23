@@ -28,12 +28,7 @@ int main()
 				A[j]     = A[j+1];
 				A[j+1]   = temp;
 				count++;
-			}
-		}
-		printf("\nAFTER ITERATION %d:  \n",i+1);
-		for (int j = 0; j < size; ++j)
-		{
-			printf("%d ",A[j] );	
+			}	
 		}
 	}
 	printf("\n");
