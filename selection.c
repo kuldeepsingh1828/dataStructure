@@ -21,7 +21,7 @@ int main()
 	{
 		int smallest = A[i];
 		int pos = i;
-		for (int j = i+1; j < size-1; ++j)
+		for (int j = i+1; j < size; ++j)
 		{
 			if (smallest > A[j])
 			{
