@@ -22,6 +22,11 @@ private:
 	Node* root;
 };
 
+BSTree::BSTree()
+{
+    root=NULL;
+    
+}
 Node* BSTree::newNode(double item){
     Node *temp = new Node;
     temp->data = item;
@@ -52,8 +57,8 @@ void BSTree::insert (double n)
 
 void BSTree::inorder(Node *root){
     if (root != NULL) {
-        inorder(root->left);
-        cout<<root->data<<" ";
+        inorder(root->left);// 
+        cout<<root->data<<" "; // 10 12 14 16 
         inorder(root->right);
     }
 }
@@ -64,21 +69,22 @@ void BSTree::inorderList(){
 
 void BSTree::preorder(Node *root){
     if (root != NULL) {
-    	cout<<root->data<<" ";
+    	cout<<root->data<<" "; // 12 10 16 14 
         preorder(root->left);
         preorder(root->right);
     }
 }
 
 void BSTree::preorderList(){
-   cout<<"\nPreOrder:"; preorder(root);
+   cout<<"\nPreOrder:"; 
+   preorder(root);
 }
 
 void BSTree::postorder(Node *root){
     if (root != NULL) {
         postorder(root->left);
         postorder(root->right);
-        cout<<root->data<<" ";
+        cout<<root->data<<" "; // 10 14 16 12
     }
 }
 
@@ -87,26 +93,16 @@ void BSTree::postorderList(){
     postorder(root);
 }
 
-BSTree::BSTree()
-{
-    root=NULL;
-    
-}
-
 
 int main() {
-BSTree tree;
+	BSTree tree;
     tree.insert(12); // nothing
-    tree.insert(2); // LEFT or Right
-    tree.insert(21);
-    tree.insert(11);
-    tree.insert(13);
-    tree.insert(1);
-    tree.insert(3);
-    tree.insert(5);
-    tree.insert(31);
+    tree.insert(10); // nothing
+    tree.insert(16); // nothing
+    tree.insert(14); // nothing
+   
     tree.postorderList();
 	tree.preorderList();
 	tree.inorderList();
-12 2 21 11 13 1 3 5 31
+// /12 2 21 11 13 1 3 5 31
 }
