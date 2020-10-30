@@ -7,18 +7,3 @@ int main()
 	printf("%p\n",p );
 	printf("%p\n",A );
 }
-
-/*
-when p = &A[0]
-0x7ffee46f1b40
-0x7ffee46f1b40
-
-
-when p = A
-p++
-0x7ffeeb94fb40
-0x7ffeeb94fb40
-
-when p = &A
-ERROR
-*/

@@ -45,12 +45,10 @@ void insert(int item)
             parent->left = node;
         } 
     }
-    
-    postorder(root);
 }
 void inorder(struct Node *root)
 {
-	while(root != NULL)
+	if(root != NULL)
 	{
 		inorder(root->left);
         cout<<" "<<root->data<<" ";
@@ -59,7 +57,7 @@ void inorder(struct Node *root)
 }
 void preorder(struct Node *root)
 {
-	while(root != NULL)
+	if(root != NULL)
 	{
 	     cout<<" "<<root->data<<" ";
 	     preorder(root->left);
@@ -68,7 +66,7 @@ void preorder(struct Node *root)
 }
 void postorder(struct Node *root)
 {
-	while(root != NULL)
+	if(root != NULL)
 	{
           postorder(root->left);
           postorder(root->right);
@@ -106,7 +104,7 @@ int main()
     char c = 'y';
     while(c == 'y' || c == 'Y')
     {   
-        system("cls");
+        system("clear");
     	cout<<"\n************************MENU************************\n";
     	cout<<"\n\t\t\t1.INSERT IN TREE\t\t\t\n";
     	cout<<"\n\t\t\t2.DISPLAY THE TREE\t\t\t\n";

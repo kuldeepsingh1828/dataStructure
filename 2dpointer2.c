@@ -13,10 +13,3 @@ int main()
 	printf("%d\n",*(p+1));
 }
 
-/*
-	4 - 7
-	2 - 5
-	86 - Kuldeep
-*/
-
-
