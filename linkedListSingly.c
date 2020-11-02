@@ -38,12 +38,14 @@ int main()
 	{
 		printf("MEMORY NOT ALLOCATED...\n");
 	}
-	first->data = 50;
-	second->data = 20;
-	third->data = 10;
+	first->data = 56;
+	second->data = 12;
+	third->data = 43;
 	first->next = second;
 	second->next = third;
 	third->next = NULL;
 	start = first;
 	display();
 }
+
+//		start -> 56 -> 12 -> 43 -> NULL;
