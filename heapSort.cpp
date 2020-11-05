@@ -1,4 +1,11 @@
 #include <stdio.h>
+//78 12 90 45 89 61 25 19 37 
+
+                //                 90
+
+                //         89              78
+                //     19       45     61      25
+                // 12      19
 void buildheap();
 void heapsort();
 int x[100], n, i;
@@ -10,6 +17,10 @@ int main()
     for(i = 1; i <= n; ++i)
         scanf("%d", &x[i]);
     buildheap();
+    for (int i = 1; i <= n; ++i)
+    {
+        printf("%d\t",x[i] );
+    }
    heapsort();
     printf("\nSorted Array in ascending order is : \n");
     for(i = 1;i <= n; ++i)
@@ -18,13 +29,18 @@ int main()
 }
 void buildheap()
 {
+    // //90 89 78 61 45 25 19 12 37
+    // k = 8
+    // i = 8
+    // j = 4
+    // temp = 89
     int j, k, temp;
     for(k=2; k <= n; ++k)
     {
         i = k;
         temp = x[k];
         j = i / 2;
-        while((i > 1) && (temp > x[j]))
+        while((i > 1) && (temp < x[j]))
         {
             x[i] = x[j];
             i = j;
