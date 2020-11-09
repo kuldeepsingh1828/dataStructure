@@ -1,8 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 using namespace  std;
-const int size = 50;
-
+const int size = 40;
 class Stack
 {
   public : 

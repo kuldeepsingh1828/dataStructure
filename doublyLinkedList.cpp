@@ -5,17 +5,17 @@ struct Node
 	struct Node *prev;
 	int data;
 	struct Node *next;
-}*start,*node1;
+}*start,*node1,*node2,*node3,*node4;
 void display()
 {
 	struct Node *temp;
 	temp = start;
 	while(temp!=NULL)
 	{
-		cout<<temp->data<<" ---> ";
+		cout<<temp->data<<" <---> ";
 		temp = temp->next;
 	}
-	cout<<"\n";
+	cout<<"NULL\n";
 }
 int main()
 {
